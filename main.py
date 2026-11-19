@@ -173,6 +173,10 @@ def main():
     foot = "SIX TOP STORIES  ·  WEDNESDAY 18 NOVEMBER 2026  ·  THE WORLD"
     d.text(((W - d.textlength(foot, font=ff)) // 2, y5 + 22), foot,
            font=ff, fill=GREY)
+    fs = font(SANS, 15)
+    src = "Sources: AP  ·  Reuters  ·  BBC  ·  PAHO/CDC  ·  Nvidia  ·  NASA JPL"
+    d.text(((W - d.textlength(src, font=fs)) // 2, y5 + 48), src,
+           font=fs, fill=GREY)
 
     os.makedirs("/output", exist_ok=True)
     img.save("/output/entry.png", format="PNG")
